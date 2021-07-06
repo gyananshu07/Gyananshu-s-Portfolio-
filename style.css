@@ -1,0 +1,747 @@
+/* Primary Color: #00ebb6 */
+/* Font: Poppins (Regular, Medium, SemiBold, Bold) */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior:smooth;
+}
+body
+{  
+    min-height: 100vh;
+    max-height: 100%;
+    overflow-x: hidden;
+    animation: bgColor infinite 20s;
+}
+@keyframes bgColor {
+    0%
+    {
+        background: linear-gradient(to right, #2C5364, #203A43);
+    }
+
+    20%
+    {
+        background: linear-gradient(to right, #000000, #434343);
+    }
+
+    40%
+    {
+        background: linear-gradient(to right, #28313b, #485461);
+    }
+
+    60%
+    {
+        background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+    }
+
+    80%
+    {
+        background: linear-gradient(to right, #41295a, #2f0743);
+    }
+
+    100%
+    {
+        background: linear-gradient(to right, #141e30, #243b55);
+    }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar{
+    width: 2.5px;
+    scrollbar-color: black ;
+}
+::-webkit-scrollbar-thumb
+{
+    background: linear-gradient(#7597de, #2b1055);
+    border-radius: 6px;
+}
+
+/* Header Style */
+header{
+    
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0px 100px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav a
+{
+    position: relative;
+    margin: 0 20px;
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    transition: 0.5s;
+}
+nav a:hover
+{
+    background: none;
+    border:1.5px solid #00ebb6;
+    border-radius: 35px;
+    font-size: 18px;
+    padding: 8px;
+}
+
+/* BG Style */
+section{
+    position: relative;
+    height: 100vh;
+    /* min-height: 100%; */
+    display: flex;
+    padding-left: 100px;
+    justify-content: center;
+    flex-wrap: wrap-reverse;
+    align-items: center;
+}
+section .image
+{   
+    position: relative;
+    top:0;
+    left: -25px;
+
+}
+section h2
+{   
+    padding-top: 0px;
+    font-size: 2.5em;
+    color: white;
+    line-height: 1.5em;
+    font-weight: 500;
+}
+section h2 span
+{
+    color: #00ebb6;
+    font-size: 1.5em;
+    font-weight: 800;
+}
+section h3{
+    color: whitesmoke;
+    position: relative;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+section h3 span{
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #00ebb6;
+}
+section .textbx a
+{   
+    position: relative;
+    display: inline-block;
+    color: #002e23;
+    background: #00ebb6;
+    transition: 0.5s;
+    top: 20px;
+    padding: 10px 30px;
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 60px;
+}
+section .textbx a:hover
+{
+    color:white;
+    font-size: 18px;
+    background: none;
+    border:1.5px solid #00ebb6;
+}
+
+/* About Style */
+.about{
+    position: relative;
+    padding: 60px 100px;
+    color: white;
+    min-height: 100%;
+    display: flex;
+    flex: 50%;
+    flex-direction: row-reverse;
+    /* flex-wrap: wrap; */
+    /* justify-content: center; */
+}
+.about h2{
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: #00ebb6;
+}
+.about .right-block
+{   
+    justify-content: right;
+    text-align: left;
+}
+#cv-button
+{   
+    position: relative;
+    display: inline-block;
+    color: #002e23;
+    background: #00ebb6;
+    transition: 0.5s;
+    top: 20px;
+    padding: 10px 10px;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 60px;
+    border-color: white;
+}
+#cv-button:hover
+{
+    background: none;
+    color:white;
+    font-size: 18px;
+    border:1.5px solid #00ebb6;
+}
+
+/* Education Style */
+.education
+{
+    position: relative;
+    top: 170px;
+    min-height: 100vh;
+    color: #00ebb6;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.education h2{
+    font-size: 40px;
+    top: 0;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+.education .card
+{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    background: #0c002b;
+    display: flex;
+    overflow: hidden;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    margin: 30px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+}
+.education .container
+{
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    min-height: 100vh;
+    margin-top: 80px;
+    justify-content: center;
+}
+.education .card .content h2#degree
+{
+    font-size: 24px;
+    margin-top: 10px;
+}
+.education .card .content h3#college
+{
+    font-size: 18px;
+    margin-top: 0px;
+}
+.education:hover .card{
+    opacity: 0.2;
+}
+.education .card:hover
+{
+    opacity: 1;
+}
+.education .card::before
+{
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    bottom: 2px;
+    width: 50%;
+    pointer-events: none;
+    background: rgba(255, 255, 255, 0.1);
+}
+.education .card .content
+{
+    padding: 30px;
+    display: flexbox;
+    text-align: center;
+    text-justify: distribute;
+    justify-content:space-around;
+    justify-items: center;
+}
+.education .card .content h2
+{
+    position: absolute;
+    right: 10px;
+    font-size: 3em;
+    font-weight: 800;
+    top: 66px;
+    color: #1778ff;
+    z-index: 1;
+    opacity: 0.1;
+    transition: 0.5s;
+}
+.education .card:hover .content h2
+{
+    opacity: 1;
+    transform: translateY(-70px);
+}
+.education .card .content h3{
+    
+    position: relative;
+    right: 0px;
+    font-size: 1.5em;
+    color: white;
+    z-index: 2;
+    justify-content: center;
+    opacity: 0.5;
+    transition: 0.5s;
+}
+.education .card:hover .content h3
+{
+    opacity: 1;
+    align-items: center;
+    text-align: center;
+}
+.education .card:hover .content h4, .education .card:hover
+{
+    position: relative;
+    right: 0px;
+    font-size: 1em;
+    color: white;
+    z-index: 2;
+    opacity: 0.5;
+    transition: 0.5s;
+}
+.education .card span:nth-child(1)
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, transparent, #1779ff);
+    animation: animate1 1s linear infinite;
+}
+@keyframes animate1 {
+    0%
+    {
+        transform: translateX(-100%);
+    }
+    100%
+    {
+        transform: translateX(100%);
+    }
+}
+.education .card span:nth-child(2)
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, #1779ff);
+    animation: animate2 1s linear infinite;
+    animation-delay: 1s;
+}
+@keyframes animate2 {
+    0%
+    {
+        transform: translateY(-100%);
+    }
+    100%
+    {
+        transform: translateY(100%);
+    }
+}
+.education .card span:nth-child(3)
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to left, transparent, #1779ff);
+    animation: animate3 1s linear infinite;
+}
+@keyframes animate3 {
+    0%
+    {
+        transform: translateX(100%);
+    }
+    100%
+    {
+        transform: translateX(-100%);
+    }
+}
+.education .card span:nth-child(4)
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(to top, transparent, #1779ff);
+    animation: animate4 1s linear infinite;
+    animation-delay: 1s;
+}
+@keyframes animate4 {
+    0%
+    {
+        transform: translateY(100%);
+    }
+    100%
+    {
+        transform: translateY(-100%);
+    }
+}
+
+/* Skills Style */
+.skills{
+    position: relative;
+    top: 170px;
+    /* min-height: 100vh; */
+    color: #00ebb6;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.skills h2{
+    font-size: 40px;
+    top: 0;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+.skills-container
+{
+    /* top: 170px; */
+    /* min-height: 100vh; */
+    color: fff;
+    width: 500px;
+    list-style: none;
+    margin: 50px auto;
+    padding: 20px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+.languages
+{
+   /* top: 170px; */
+    /* min-height: 100vh; */
+    color: fff;
+    width: 500px;
+    height: 540.364px;
+    list-style: none;
+    margin: 50px auto;
+    padding: 20px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); 
+}
+.height-low
+{
+    margin: 0px auto;
+    margin-bottom: 20px;
+    top: 0;
+}
+.skills-container h2{
+    text-align: center;
+    color:#00ebb6;
+}
+.skills-container h3{
+    margin: 5px;
+    font-size: 16px;
+    text-align: left;
+    color: whitesmoke;
+}
+.skills-container li{
+    margin: 20px 0;
+    padding: 10px;
+}
+.languages li
+{
+    margin-top: 60px;
+}
+.bar
+{
+    background: #353b48;
+    display: block;
+    height: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.bar:hover
+{
+    box-shadow: 0 14px 28px rgba(68, 48, 48, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+.bar span
+{
+    height: 20px;
+    float: left;
+    background: linear-gradient(-135deg, #00ebb6, #009774);
+}
+
+/* Skills Bar-Web-D */
+.html
+{
+    width:90%;
+    animation: html 3s;
+}
+.css
+{
+    width:60%;
+    animation: css 3s;
+}
+.javascript
+{
+    width:40%;
+    animation: javascript 3s;
+}
+.react
+{
+    width:50%;
+    animation: react 3s;
+}
+.native
+{
+    width:50%;
+    animation: native 3s;
+}
+/* Animation */
+@keyframes html {
+    0%
+    {
+        width: 0%;
+    }
+    100%
+    {
+        width: 90%;
+    }
+}
+@keyframes css {
+    0%
+    {
+        width: 0%;
+    }
+    100%
+    {
+        width: 60%;
+    }
+}
+@keyframes javascript {
+    0%
+    {
+        width: 0%;
+    }
+    100%
+    {
+        width: 40%;
+    }
+}
+@keyframes react {
+    0%
+    {
+        width: 0%;
+    }
+    100%
+    {
+        width: 50%;
+    }
+}
+@keyframes native {
+    0%
+    {
+        width: 0%;
+    }
+    100%
+    {
+        width: 50%;
+    }
+}
+
+/* Skills Bar-Languages */
+.c
+{
+    width:70%;
+    animation: c 3s;
+}
+.cpp
+{
+    width:75%;
+    animation: cpp 3s;
+}
+.kotlin
+{
+    width:50%;
+    animation: kotlin 3s;
+}
+/* Animation */
+@keyframes c {
+    0%
+    {
+        width: 0%;
+    }
+    100%
+    {
+        width: 70%;
+    }
+}
+@keyframes cpp {
+    0%
+    {
+        width: 0%;
+    }
+    100%
+    {
+        width: 75%;
+    }
+}
+@keyframes kotlin {
+    0%
+    {
+        width: 0%;
+    }
+    100%
+    {
+        width: 50%;
+    }
+}
+
+/* Skills Bar-Design */
+.ps
+{
+    width:70%;
+    animation: ps 3s;
+}
+.ai
+{
+    width:50%;
+    animation: ai 3s;
+}
+.xd
+{
+    width:80%;
+    animation: xd 3s;
+}
+.figma
+{
+    width:70%;
+    animation: figma 3s;
+}
+/* Animation */
+@keyframes ps {
+    0%
+    {
+        width: 0%;
+    }
+    100%
+    {
+        width: 70%;
+    }
+}
+@keyframes ai {
+    0%
+    {
+        width: 0%;
+    }
+    100%
+    {
+        width: 50%;
+    }
+}
+@keyframes xd {
+    0%
+    {
+        width: 0%;
+    }
+    100%
+    {
+        width: 80%;
+    }
+}
+@keyframes figma {
+    0%
+    {
+        width: 0%;
+    }
+    100%
+    {
+        width: 70%;
+    }
+}
+
+/* Skills Bar-Office */
+.excel
+{
+    width:75%;
+    animation: excel 3s;
+}
+.word
+{
+    width:60%;
+    animation: word 3s;
+}
+.ppt
+{
+    width:50%;
+    animation: ppt 3s;
+}
+.form
+{
+    width:90%;
+    animation: form 3s;
+}
+/* Animation */
+@keyframes excel {
+    0%
+    {
+        width: 0%;
+    }
+    100%
+    {
+        width: 75%;
+    }
+}
+@keyframes word {
+    0%
+    {
+        width: 0%;
+    }
+    100%
+    {
+        width: 60%;
+    }
+}
+@keyframes ppt {
+    0%
+    {
+        width: 0%;
+    }
+    100%
+    {
+        width: 50%;
+    }
+}
+@keyframes form {
+    0%
+    {
+        width: 0%;
+    }
+    100%
+    {
+        width: 90%;
+    }
+}
