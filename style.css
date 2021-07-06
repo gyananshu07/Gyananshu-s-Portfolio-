@@ -94,10 +94,10 @@ section{
     position: relative;
     height: 100vh;
     /* min-height: 100%; */
-    display: flex;
+    /* display: flex; */
     padding-left: 100px;
     justify-content: center;
-    flex-wrap: wrap-reverse;
+    /* flex-wrap: wrap-reverse; */
     align-items: center;
 }
 section .image
