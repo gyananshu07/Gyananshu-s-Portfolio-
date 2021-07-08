@@ -5,41 +5,54 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gyananshu</title>
+    
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="style.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
-
-    <!-- Header Section -->
     <header>
-        <a href="#" class="logo">
-            <img src="./Logo.svg" alt="Logo" class="logo-of-mine">
-        </a>
-        <nav>
-            <div id="marker"></div>
-            <a href="#home" id="home">Home</a>
-            <a href="#about">About</a>
-            <a href="#education">Education</a>
-            <a href="#skills">Skills</a>
-            <a href="#">Works</a>
-            <a href="#">Contact</a>
+        <div class="user">
+            <img src="images/WhatsApp Image 2021-07-07 at 9.36.48 PM.jpeg" alt="My Image">
+            <h3 class="name">Gyananshu Kashyap</h3>
+            <p class="post">Designer | Web/App Developer</p>
+        </div>
+    
+        <nav class="navbar">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#works">Works</a></li>
+            </ul>
         </nav>
     </header>
-    <section class="banner">
-        <div class="textbx">
-            <h2>Hello, I'm<br> <span> Gyananshu Kashyap. </span></h2>
+    
+    <!-- header section ends -->
+
+    <div id="menu" class="fas fa-bars"></div>
+    
+    <!-- home section starts  -->
+
+    <section class="home" id="home">
+        <h2>Hello, I'm<br> <span> Gyananshu Kashyap. </span></h2>
             <h3>I am a <span class="change"></span></h3>
-            <a href="#about" class="btn">About Me</a>
-        </div>
-        <div class="image">
-            <img src="./ToyFaces_Tansparent_BG_29.png" alt="3D Image">
-        </div>
+            <a href="#about"><button class="btn">About Me <i class="fas fa-user"></i></button></a>
     </section>
 
-    <!-- About Section -->
-    <div class="about" id="about">
+    <!-- home section ends -->
+
+    <!-- about section starts  -->
+
+    <section class="about" id="about">
         <div class="right-block">
             <h2>About Me</h2>
         <p> I am a Second year Undergraduate at MMMUT, Gorakhpur, pursuing Bachelors of Technology in Electronics and Communications.<br>
@@ -51,15 +64,16 @@
         <a onclick="location.href = 'https://drive.google.com/uc?export=download&id=1tij3jZDpNLyQac2VV1jtYEnauNwo_pkk';"
             id="cv-button">
                 Download CV
+                <i class="fas fa-download"></i>
         </a>
         </div>
-        <div class="left-image-block">
-            <img src="./home-3d.svg" alt="3D Image">
-        </div>
-    </div>
+    </section>
+    
+    <!-- about section ends -->
 
-    <!-- Education Section -->
-    <div class="education" id="education">
+    <!-- education section starts-->
+
+    <section class="education" id="education">
         <h2>Education</h2>
         <div class="container">
             <div class="card">
@@ -99,12 +113,15 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Skills Section -->
-    <div class="skills" id="skills">
-        <div class="skills-container">
-            
+    <!-- education section ends-->
+    
+    <!-- skills section starts -->
+
+    <section class="skills" id="skills">
+
+        <div class="skills-container development">    
         <!-- Web-D/App-D -->
         <h2>Development Skills</h2>
         <li>
@@ -125,7 +142,7 @@
         </li>
         <li>
             <h3>React Native</h3>
-            <span class="bar"><span class="native"></span></span>
+            <span class="bar native-class"><span class="native"></span></span>
         </li>
         </div>
 
@@ -146,50 +163,71 @@
             </li>
         </div>
 
-            <!-- Design -->
-            <div class="skills-container height-low">
-                <h2>Designing Skills</h2>
-                <li>
-                    <h3>Adobe Photoshop</h3>
-                    <span class="bar"><span class="ps"></span></span>
-                </li>
-                <li>
-                    <h3>Adobe Illustrator</h3>
-                    <span class="bar"><span class="ai"></span></span>
-                </li>
-                <li>
-                    <h3>Adobe XD</h3>
-                    <span class="bar"><span class="xd"></span></span>
-                </li>
-                <li>
-                    <h3>Figma</h3>
-                    <span class="bar"><span class="figma"></span></span>
-                </li>
-            </div>
+        <!-- Design -->
+        <div class="skills-container height-low">
+            <h2>Designing Skills</h2>
+            <li>
+                <h3>Adobe Photoshop</h3>
+                <span class="bar"><span class="ps"></span></span>
+            </li>
+            <li>
+                <h3>Adobe Illustrator</h3>
+                <span class="bar"><span class="ai"></span></span>
+            </li>
+            <li>
+                <h3>Adobe XD</h3>
+                <span class="bar"><span class="xd"></span></span>
+            </li>
+            <li>
+                <h3>Figma</h3>
+                <span class="bar"><span class="figma"></span></span>
+            </li>
+        </div>
 
-            <!-- Office Skills -->
-            <div class="skills-container height-low">
-                <h2>Office Skills</h2>
-                <li>
-                    <h3>MS Excel</h3>
-                    <span class="bar"><span class="excel"></span></span>
-                </li>
-                <li>
-                    <h3>MS Word</h3>
-                    <span class="bar"><span class="word"></span></span>
-                </li>
-                <li>
-                    <h3>MS PowerPoint</h3>
-                    <span class="bar"><span class="ppt"></span></span>
-                </li>
-                <li>
-                    <h3>G-Form</h3>
-                    <span class="bar"><span class="form"></span></span>
-                </li>
-            </div>
-    </div>
+        <!-- Office Skills -->
+        <div class="skills-container height-low">
+            <h2>Office Skills</h2>
+            <li>
+                <h3>MS Excel</h3>
+                <span class="bar"><span class="excel"></span></span>
+            </li>
+            <li>
+                <h3>MS Word</h3>
+                <span class="bar"><span class="word"></span></span>
+            </li>
+            <li>
+                <h3>MS PowerPoint</h3>
+                <span class="bar"><span class="ppt"></span></span>
+            </li>
+            <li>
+                <h3>G-Form</h3>
+                <span class="bar"><span class="form"></span></span>
+            </li>
+        </div>
+    </section>
 
-    <!-- JavaScript --> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    <!-- jquery cdn link  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- custom js file link  -->
+    <script src="script.js"></script>
+
+    <!-- Change JavaScript --> 
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script>
 

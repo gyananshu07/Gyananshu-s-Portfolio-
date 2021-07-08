@@ -1,50 +1,26 @@
-/* Primary Color: #00ebb6 */
-/* Font: Poppins (Regular, Medium, SemiBold, Bold) */
+:root{
+    --main:#00ebb6;
+    --red: #eb4a4a;
+    --white: #fff;
+}
 
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    scroll-behavior:smooth;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border:none;
+    /* text-transform: capitalize; */
+    transition: all .2s linear;
 }
-body
-{  
-    min-height: 100vh;
-    max-height: 100%;
+*::selection{
+    background:var(--main);
+    color:#333;
+}
+html{
+    font-size: 62.5%;
     overflow-x: hidden;
-    animation: bgColor infinite 20s;
-}
-@keyframes bgColor {
-    0%
-    {
-        background: linear-gradient(to right, #2C5364, #203A43);
-    }
-
-    20%
-    {
-        background: linear-gradient(to right, #000000, #434343);
-    }
-
-    40%
-    {
-        background: linear-gradient(to right, #28313b, #485461);
-    }
-
-    60%
-    {
-        background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
-    }
-
-    80%
-    {
-        background: linear-gradient(to right, #41295a, #2f0743);
-    }
-
-    100%
-    {
-        background: linear-gradient(to right, #141e30, #243b55);
-    }
 }
 
 /* Custom Scrollbar */
@@ -57,124 +33,232 @@ body
     background: linear-gradient(#7597de, #2b1055);
     border-radius: 6px;
 }
+/* Custom Scrollbar Ends */
 
-/* Header Style */
-header{
-    
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 0px 100px;
-    margin-top: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+body
+{  
+    /* min-height: 100vh;
+    max-height: 100%; */
+    overflow-x: hidden;
+    animation: bgColor infinite 20s;
+    padding-left: 35rem;
 }
-nav a
-{
-    position: relative;
-    margin: 0 20px;
-    font-size: 16px;
-    color: white;
-    text-decoration: none;
+/* @keyframes bgColor {
+    0%
+    {
+        background: linear-gradient(to left, #2C5364, #203A43);
+    }
+
+    20%
+    {
+        background: linear-gradient(to left, #000000, #434343);
+    }
+
+    40%
+    {
+        background: linear-gradient(to left, #28313b, #485461);
+    }
+
+    60%
+    {
+        background: linear-gradient(to left, #0f0c29, #302b63, #24243e);
+    }
+
+    80%
+    {
+        background: linear-gradient(to left, #41295a, #2f0743);
+    }
+
+    100%
+    {
+        background: linear-gradient(to left, #141e30, #243b55);
+    }
+} */
+section{
+    min-height: 100vh;
+    padding:1rem;
+}
+.btn{
+    padding:.7rem 3rem;
+    background: var(--main);
+    color: black;
+    font-weight: 400;
+    cursor: pointer;
+    margin-top: 1rem;
+    font-size: 2rem;
+    border-radius: 5rem;
     transition: 0.5s;
 }
-nav a:hover
-{
+
+.btn i{
+    padding:0 .5rem;
+    font-size: 1.8rem;
+}
+
+.btn:hover{
     background: none;
-    border:1.5px solid #00ebb6;
-    border-radius: 35px;
-    font-size: 18px;
-    padding: 8px;
+    border:2px solid var(--red);
+    color:#fff;
+    font-size: 2.2rem;
+    border-radius: 5rem;
 }
 
-/* BG Style */
-section{
-    position: relative;
-    height: 100vh;
-    /* min-height: 100%; */
-    /* display: flex; */
-    padding-left: 100px;
-    justify-content: center;
-    /* flex-wrap: wrap-reverse; */
+/* Header Section */
+header{
+    position: fixed;
+    top:0; left:0;
+    z-index: 1000;
+    height:100%;
+    width:30rem;
+    display: flex;
     align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    text-align: center;
+    overflow-x: hidden;
+    animation: bgColor infinite 20s;
 }
-section .image
-{   
-    position: relative;
-    top:0;
-    left: -25px;
+@keyframes bgColor {
+    0%
+    {
+        background: linear-gradient(to left, #2C5364, #203A43);
+    }
 
+    20%
+    {
+        background: linear-gradient(to left, #000000, #434343);
+    }
+
+    40%
+    {
+        background: linear-gradient(to left, #28313b, #485461);
+    }
+
+    60%
+    {
+        background: linear-gradient(to left, #0f0c29, #302b63, #24243e);
+    }
+
+    80%
+    {
+        background: linear-gradient(to left, #41295a, #2f0743);
+    }
+
+    100%
+    {
+        background: linear-gradient(to left, #141e30, #243b55);
+    }
 }
-section h2
+header .user img
+{
+    height: 17rem;
+    width: 17rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: .4rem solid var(--main);
+}
+header .user .name{
+    font-size: 2.5rem;
+    color:var(--main);
+}
+
+header .user .post{
+    font-size: 1.5rem;
+    color:#eee;
+}
+header .navbar{
+    width:100%;
+}
+
+header .navbar ul{
+    list-style: none;
+    padding:1rem 3rem;
+}
+
+header .navbar ul li a{
+    display: block;
+    padding:1rem;
+    margin:1.5rem 0;
+    background: none;
+    border:2px solid #00ebb6;
+    color:#fff;
+    font-size: 2rem;
+    border-radius: 5rem;
+    transition: 0.5s;
+}
+header .navbar ul li a:focus, 
+header .navbar ul li a:hover
+{
+    border:2px solid var(--red);
+    color:#fff;
+    font-size: 2.5rem;
+    border-radius: 5rem;
+}
+/* Header Section Ends*/
+
+#menu{
+    position: fixed;
+    top:2rem; right:2rem;
+    background: var(--red);
+    color:#fff;
+    cursor: pointer;
+    font-size: 2.5rem;
+    padding:1rem 1.5rem;
+    z-index: 1000;
+    display: none;
+}
+.home{
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    padding:0 15rem;
+}
+.home h2
 {   
     padding-top: 0px;
-    font-size: 2.5em;
+    font-size: 3em;
     color: white;
     line-height: 1.5em;
     font-weight: 500;
 }
-section h2 span
+.home h2 span
 {
     color: #00ebb6;
     font-size: 1.5em;
     font-weight: 800;
 }
-section h3{
+.home h3{
     color: whitesmoke;
     position: relative;
-    font-size: 1.5em;
+    font-size: 2em;
     font-weight: 700;
 }
 
-section h3 span{
+.home h3 span{
     text-transform: uppercase;
     letter-spacing: 1px;
     color: #00ebb6;
 }
-section .textbx a
-{   
-    position: relative;
-    display: inline-block;
-    color: #002e23;
-    background: #00ebb6;
-    transition: 0.5s;
-    top: 20px;
-    padding: 10px 30px;
-    text-decoration: none;
-    font-size: 20px;
-    border-radius: 60px;
-}
-section .textbx a:hover
-{
-    color:white;
-    font-size: 18px;
-    background: none;
-    border:1.5px solid #00ebb6;
-}
 
-/* About Style */
+/* About Style Starts*/
 .about{
     position: relative;
-    padding: 60px 100px;
     color: white;
-    min-height: 100%;
     display: flex;
-    flex: 50%;
-    flex-direction: row-reverse;
-    /* flex-wrap: wrap; */
-    /* justify-content: center; */
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
 }
 .about h2{
-    font-size: 30px;
-    margin-bottom: 10px;
+    font-size: 3.4rem;
     color: #00ebb6;
 }
 .about .right-block
 {   
     justify-content: right;
-    text-align: left;
+    text-align: justify;
+    font-size: 1.5rem;
 }
 #cv-button
 {   
@@ -186,7 +270,8 @@ section .textbx a:hover
     top: 20px;
     padding: 10px 10px;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 1.8rem;
+    font-weight: 500;
     border-radius: 60px;
     border-color: white;
 }
@@ -194,15 +279,15 @@ section .textbx a:hover
 {
     background: none;
     color:white;
-    font-size: 18px;
+    font-size: 1.9rem;
     border:1.5px solid #00ebb6;
 }
+/* About Style Ends */
 
-/* Education Style */
+/* Education Style Starts*/
 .education
 {
     position: relative;
-    top: 170px;
     min-height: 100vh;
     color: #00ebb6;
     align-items: center;
@@ -212,7 +297,7 @@ section .textbx a:hover
     flex-direction: row;
 }
 .education h2{
-    font-size: 40px;
+    font-size: 4rem;
     top: 0;
     align-items: center;
     text-align: center;
@@ -221,8 +306,8 @@ section .textbx a:hover
 .education .card
 {
     position: relative;
-    width: 300px;
-    height: 400px;
+    width: 27rem;
+    height: 35rem;
     background: #0c002b;
     display: flex;
     overflow: hidden;
@@ -243,7 +328,7 @@ section .textbx a:hover
 }
 .education .card .content h2#degree
 {
-    font-size: 24px;
+    font-size: 2.4rem;
     margin-top: 10px;
 }
 .education .card .content h3#college
@@ -272,7 +357,7 @@ section .textbx a:hover
 .education .card .content
 {
     padding: 30px;
-    display: flexbox;
+    /* display: flexbox; */
     text-align: center;
     text-justify: distribute;
     justify-content:space-around;
@@ -293,13 +378,14 @@ section .textbx a:hover
 .education .card:hover .content h2
 {
     opacity: 1;
+    font-size: 4rem;
     transform: translateY(-70px);
 }
 .education .card .content h3{
     
     position: relative;
     right: 0px;
-    font-size: 1.5em;
+    font-size: 1.8em;
     color: white;
     z-index: 2;
     justify-content: center;
@@ -309,6 +395,7 @@ section .textbx a:hover
 .education .card:hover .content h3
 {
     opacity: 1;
+    font-size: 2.5rem;
     align-items: center;
     text-align: center;
 }
@@ -316,7 +403,7 @@ section .textbx a:hover
 {
     position: relative;
     right: 0px;
-    font-size: 1em;
+    font-size: 1.4em;
     color: white;
     z-index: 2;
     opacity: 0.5;
@@ -405,11 +492,12 @@ section .textbx a:hover
     }
 }
 
+/* Education Style Ends*/
+
 /* Skills Style */
+
 .skills{
     position: relative;
-    top: 170px;
-    /* min-height: 100vh; */
     color: #00ebb6;
     align-items: center;
     text-align: center;
@@ -419,7 +507,7 @@ section .textbx a:hover
     flex-direction: row;
 }
 .skills h2{
-    font-size: 40px;
+    font-size: 3rem;
     top: 0;
     align-items: center;
     text-align: center;
@@ -427,32 +515,13 @@ section .textbx a:hover
 }
 .skills-container
 {
-    /* top: 170px; */
-    /* min-height: 100vh; */
-    color: fff;
-    width: 500px;
+    color: #fff;
+    width: 50rem;
+    height: 55rem;
     list-style: none;
-    margin: 50px auto;
-    padding: 20px;
+    margin: 50px 6px;
+    padding: 30px;
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-}
-.languages
-{
-   /* top: 170px; */
-    /* min-height: 100vh; */
-    color: fff;
-    width: 500px;
-    height: 540.364px;
-    list-style: none;
-    margin: 50px auto;
-    padding: 20px;
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); 
-}
-.height-low
-{
-    margin: 0px auto;
-    margin-bottom: 20px;
-    top: 0;
 }
 .skills-container h2{
     text-align: center;
@@ -465,12 +534,17 @@ section .textbx a:hover
     color: whitesmoke;
 }
 .skills-container li{
-    margin: 20px 0;
-    padding: 10px;
+    margin: 4rem 0;
+    padding-bottom: 2rem ;
+}
+.development li
+{
+    margin-top: 1.8rem;
+    padding-bottom: 1rem ;
 }
 .languages li
 {
-    margin-top: 60px;
+    margin-top: 4.8rem;
 }
 .bar
 {
@@ -745,3 +819,101 @@ section .textbx a:hover
         width: 90%;
     }
 }
+
+/* Skills Style Ends */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* media queries  */
+
+@media (max-width:1200px){
+
+    html{
+        font-size: 55%;
+    }
+
+    .home{
+        padding:1rem 4rem;
+    }
+
+}
+@media (max-width:991px){
+
+    header{
+        left:-120%;
+    }
+ 
+    #menu{
+        display: block;
+    }
+ 
+    header.toggle{
+     left:0%;
+    }
+ 
+    body{
+        padding:0;
+    }
+
+    .skills-container
+    {
+        color: #fff;
+        width: 50rem;
+        height: 55rem;
+        list-style: none;
+        margin: 50px 6px;
+        padding: 10px;
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    }
+ }
+ 
+ @media (max-width:768px){
+ 
+     html{
+         font-size: 50%;
+     }
+  
+  }
+
+  @media (max-width:400px){
+
+    header{
+        width: 100vw;
+    }
+
+    .heading{
+        margin:0 3rem;
+    }
+ }
