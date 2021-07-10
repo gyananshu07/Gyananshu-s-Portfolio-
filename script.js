@@ -34,5 +34,11 @@ $(document).ready(function(){
       );
   
     });
+
+    $(window).on('load', function()
+    {
+      $('#preloader').delay(2050).fadeout ('slow');
+      $('body').delay(3850).css({'overflow':'visible'});
+    })
   
   });
